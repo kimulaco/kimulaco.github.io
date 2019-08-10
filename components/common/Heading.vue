@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .Heading {
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   margin: 0 0 32px;
 }
 </style>

@@ -47,12 +47,10 @@ export default {
     return {
       socialLink: [
         {
-          id: 'twitter',
           text: 'Twitter',
           href: DEFINE.URL.TWITTER
         },
         {
-          id: 'github',
           text: 'GitHub',
           href: DEFINE.URL.GITHUB
         }

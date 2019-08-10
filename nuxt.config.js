@@ -11,7 +11,7 @@ export default {
         content: 'kimulaco profile site.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }]
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
