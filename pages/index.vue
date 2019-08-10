@@ -2,7 +2,7 @@
   <div class="PageHome">
     <section-block class="PageHome_main">
       <header-content />
-      <social-link />
+      <link-list :items="socialLink" />
     </section-block>
 
     <section-block>
@@ -29,9 +29,10 @@
 </template>
 
 <script>
+import DEFINE from '@/assets/js/define'
 import SectionBlock from '@/components/common/SectionBlock'
 import Heading from '@/components/common/Heading'
-import SocialLink from '@/components/common/SocialLink'
+import LinkList from '@/components/common/LinkList'
 import HeaderContent from '@/components/parts/HeaderContent'
 
 export default {
@@ -40,7 +41,23 @@ export default {
     SectionBlock,
     Heading,
     HeaderContent,
-    SocialLink
+    LinkList
+  },
+  data() {
+    return {
+      socialLink: [
+        {
+          id: 'twitter',
+          text: 'Twitter',
+          href: DEFINE.URL.TWITTER
+        },
+        {
+          id: 'github',
+          text: 'GitHub',
+          href: DEFINE.URL.GITHUB
+        }
+      ]
+    }
   }
 }
 </script>

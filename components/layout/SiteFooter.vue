@@ -1,7 +1,11 @@
 <template>
   <footer class="SiteFooter">
     <div class="SiteFooter_inner">
-      <p class="SiteFooter_copyright"><small>&copy; 2019 kimulaco.</small></p>
+      <p class="SiteFooter_copyright">
+        <small class="SiteFooter_copyright-text">
+          &copy; 2019 kimulaco.
+        </small>
+      </p>
     </div>
   </footer>
 </template>
@@ -24,7 +28,9 @@ export default {
     margin: 0 auto;
   }
   &_copyright {
-    font-size: 16px;
+    &-text {
+      font-size: 16px;
+    }
   }
 }
 </style>

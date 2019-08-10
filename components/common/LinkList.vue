@@ -1,21 +1,8 @@
 <template>
-  <ul class="SocialLink">
-    <li class="SocialLink_item">
-      <a
-        class="SocialLink_anchor"
-        href="https://twitter.com/kimulaco"
-        target="_blank"
-      >
-        Twitter
-      </a>
-    </li>
-    <li class="SocialLink_item">
-      <a
-        class="SocialLink_anchor"
-        href="https://github.com/kimulaco"
-        target="_blank"
-      >
-        GitHub
+  <ul class="LinkList">
+    <li v-for="item in items" :key="item.id" class="LinkList_item">
+      <a :href="item.href" class="LinkList_anchor" target="_blank">
+        {{ item.text }}
       </a>
     </li>
   </ul>
@@ -23,14 +10,22 @@
 
 <script>
 export default {
-  name: 'SocialLink'
+  name: 'LinkList',
+  props: {
+    items: {
+      type: Array,
+      default() {
+        return []
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 $margin-size: 16px;
 
-.SocialLink {
+.LinkList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
