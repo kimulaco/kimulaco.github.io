@@ -1,5 +1,5 @@
 <template>
-  <div class="Layout">
+  <div v-show="isFontLoaded" class="Layout">
     <main class="Layout_main">
       <nuxt />
     </main>
@@ -14,6 +14,16 @@ export default {
   name: 'Layout',
   components: {
     SiteFooter
+  },
+  data() {
+    return {
+      isFontLoaded: false
+    }
+  },
+  mounted() {
+    document.fonts.ready.then((fontFaceSet) => {
+      this.isFontLoaded = true
+    })
   }
 }
 </script>
