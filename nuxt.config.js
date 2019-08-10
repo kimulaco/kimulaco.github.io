@@ -19,7 +19,11 @@ export default {
   devModules: ['@nuxtjs/eslint-module'],
   modules: [
     // '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: ['@/assets/scss/_variable.scss']
+  },
   build: {
     extend(config, ctx) {}
   }
