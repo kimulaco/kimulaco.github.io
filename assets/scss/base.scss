@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: $FONT_FAMILY;
+}
+
+body {
+  background: $COLOR_CHARCOAL;
+}
+
+main {
+  background: $COLOR_WHITE;
 }

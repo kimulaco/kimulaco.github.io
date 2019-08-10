@@ -3,13 +3,19 @@
     <main class="Layout_main">
       <nuxt />
     </main>
+    <site-footer />
   </div>
 </template>
 
 <script>
+import SiteFooter from '@/components/layout/SiteFooter'
+
 export default {
-  name: 'Layout'
+  name: 'Layout',
+  components: {
+    SiteFooter
+  }
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
