@@ -1,16 +1,20 @@
 <template>
-  <ul class="LinkList">
-    <li v-for="item in items" :key="item.text" class="LinkList_item">
-      <a :href="item.href" class="LinkList_anchor" target="_blank">
-        {{ item.text }}
-      </a>
-    </li>
-  </ul>
+  <div class="BuretteList">
+    <ul class="BuretteList_list">
+      <li v-for="item in items" :key="item.name" class="BuretteList_item">
+        <a :href="item.url" class="BuretteList_anchor" target="_blank">
+          <span>
+            {{ item.name }}
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'LinkList',
+  name: 'BuretteList',
   props: {
     items: {
       type: Array,
@@ -25,24 +29,33 @@ export default {
 <style lang="scss" scoped>
 $margin-size: 16px;
 
-.LinkList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  margin: -#{$margin-size} 0 0 -#{$margin-size};
-  list-style: none;
+.BuretteList {
+  max-width: 360px;
+  margin: 0 auto;
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: -#{$margin-size} 0 0 -#{$margin-size};
+    list-style: none;
+  }
   &_item {
+    flex: 0 1 calc(50% - #{$margin-size});
+    width: calc(50% - #{$margin-size});
+    max-width: calc(50% - #{$margin-size});
     margin: $margin-size 0 0 $margin-size;
   }
   a {
     display: block;
-    color: $COLOR_WHITE;
-    min-width: 100px;
+    color: $COLOR_CHARCOAL;
     padding: 8px;
-    border: 2px solid $COLOR_WHITE;
-    border-radius: 2px;
+    text-align: center;
     text-decoration: none;
+    span {
+      display: inline-block;
+      padding: 0 5px;
+      border-bottom: 1px solid;
+    }
   }
 }
 </style>

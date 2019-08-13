@@ -1,6 +1,16 @@
 export default {
   URL: {
-    TWITTER: 'https://twitter.com/kimulaco',
-    GITHUB: 'https://github.com/kimulaco'
+    twitter: {
+      name: 'Twitter',
+      url: 'https://twitter.com/kimulaco'
+    },
+    github: {
+      name: 'GitHub',
+      url: 'https://github.com/kimulaco'
+    },
+    cssbattle: {
+      name: 'CSSBattle',
+      url: 'https://cssbattle.dev/player/kimulaco'
+    }
   }
 }
