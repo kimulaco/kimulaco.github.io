@@ -1,5 +1,5 @@
 <template>
-  <h2 class="Heading">
+  <h2 :is="tagName" class="Heading">
     <span class="Heading_inner">
       <slot />
     </span>
@@ -8,7 +8,18 @@
 
 <script>
 export default {
-  name: 'Heading'
+  name: 'Heading',
+  props: {
+    level: {
+      type: [String, Number],
+      default: '2'
+    }
+  },
+  computed: {
+    tagName() {
+      return `h${this.level}`
+    }
+  }
 }
 </script>
 
@@ -17,5 +28,8 @@ export default {
   text-align: center;
   font-size: 28px;
   margin: 0 0 32px;
+}
+h3.Heading {
+  font-size: 24px;
 }
 </style>

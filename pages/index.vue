@@ -7,23 +7,21 @@
 
     <section-block>
       <heading>Profile</heading>
-      <dl>
-        <div>
-          <dt>Skill</dt>
-          <dd>HTML</dd>
-          <dd>CSS</dd>
-          <dd>JavaScript</dd>
-          <dd>Vue.js</dd>
-          <dd>Nuxt.js</dd>
-          <dd>Node.js</dd>
-          <dd>AMP</dd>
-          <dd>PHP</dd>
-        </div>
-        <div>
-          <dt>Like</dt>
-          <dd>Movie</dd>
-        </div>
-      </dl>
+
+      <section>
+        <heading level="3">Skill</heading>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Vue.js</li>
+          <li>Nuxt.js</li>
+          <li>Node.js</li>
+          <li>AMP</li>
+          <li>PHP</li>
+        </ul>
+      </section>
     </section-block>
   </div>
 </template>
