@@ -27,9 +27,31 @@ export default {
 .Heading {
   text-align: center;
   font-size: 28px;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
+  &_inner {
+    display: inline-block;
+    padding: 0 10px 2px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      background: $COLOR_CHARCOAL;
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      transform: skewX(45deg);
+    }
+  }
 }
 h3.Heading {
   font-size: 24px;
+  margin: 0 0 16px;
+  .Heading_inner {
+    &:after {
+      display: none;
+    }
+  }
 }
 </style>

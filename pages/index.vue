@@ -10,17 +10,20 @@
 
       <section>
         <heading level="3">Skill</heading>
-
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Vue.js</li>
-          <li>Nuxt.js</li>
-          <li>Node.js</li>
-          <li>AMP</li>
-          <li>PHP</li>
-        </ul>
+        <profile-list
+          :items="[
+            'HTML',
+            'CSS',
+            'Sass',
+            'JavaScript',
+            'Vue.js',
+            'Nuxt.js',
+            'Node.js',
+            'jQuery',
+            'AMP',
+            'PHP'
+          ]"
+        />
       </section>
     </section-block>
   </div>
@@ -30,6 +33,7 @@
 import DEFINE from '@/assets/js/define'
 import SectionBlock from '@/components/common/SectionBlock'
 import Heading from '@/components/common/Heading'
+import ProfileList from '@/components/common/ProfileList'
 import LinkList from '@/components/common/LinkList'
 import HeaderContent from '@/components/parts/HeaderContent'
 
@@ -39,6 +43,7 @@ export default {
     SectionBlock,
     Heading,
     HeaderContent,
+    ProfileList,
     LinkList
   },
   data() {

@@ -28,4 +28,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.Layout {
+  &_main {
+    padding-bottom: 30px;
+  }
+}
+</style>
