@@ -17,7 +17,7 @@ export default {
   &_inner {
     @include reset-child-margin();
     max-width: $CONTENT_MAX_WIDTH;
-    padding: 32px 20px;
+    padding: 40px 20px;
     margin: 0 auto;
   }
 }

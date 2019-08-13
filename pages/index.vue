@@ -7,6 +7,7 @@
 
     <section-block>
       <heading>Profile</heading>
+
       <heading level="3">Skill</heading>
       <profile-list
         :items="[
@@ -14,6 +15,7 @@
           'CSS',
           'Sass',
           'JavaScript',
+          'TypeScript',
           'Vue.js',
           'Nuxt.js',
           'Node.js',
@@ -22,6 +24,7 @@
           'PHP'
         ]"
       />
+
       <heading level="3">Like</heading>
       <profile-list :items="['Movie', 'Game']" />
     </section-block>
