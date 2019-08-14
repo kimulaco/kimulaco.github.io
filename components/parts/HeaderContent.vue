@@ -2,11 +2,7 @@
   <div class="HeaderContent">
     <h1 class="HeaderContent_title">kimulaco</h1>
     <div class="HeaderContent_profile">
-      <img
-        class="HeaderContent_profile-icon"
-        src="@/assets/img/profile.png"
-        alt=""
-      />
+      <img class="HeaderContent_profile-icon" src="/img/profile.png" alt="" />
     </div>
     <p class="HeaderContent_desc">Web Front-end Developer.</p>
   </div>
