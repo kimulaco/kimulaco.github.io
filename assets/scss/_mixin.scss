@@ -6,6 +6,14 @@
   }
 }
 
+@mixin active() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
 @mixin reset-child-margin() {
   > * {
     &:first-child {
