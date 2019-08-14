@@ -10,8 +10,13 @@ html {
 
 body {
   background: $COLOR_CHARCOAL;
+  text-align: center;
 }
 
 main {
   background: $COLOR_WHITE;
+}
+
+p {
+  margin: 16px 0 28px;
 }

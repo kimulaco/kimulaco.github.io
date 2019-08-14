@@ -37,12 +37,19 @@ $margin-size: 16px;
   }
   a {
     display: block;
-    color: $COLOR_WHITE;
+    color: $COLOR_CHARCOAL;
     min-width: 100px;
     padding: 8px;
-    border: 2px solid $COLOR_WHITE;
+    border: 2px solid $COLOR_CHARCOAL;
     border-radius: 2px;
     text-decoration: none;
+    text-align: center;
+  }
+  &.-type-02 {
+    a {
+      color: $COLOR_WHITE;
+      border-color: $COLOR_WHITE;
+    }
   }
 }
 </style>

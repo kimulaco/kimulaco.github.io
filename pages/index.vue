@@ -2,7 +2,7 @@
   <div class="PageHome">
     <section-block class="PageHome_main">
       <header-content />
-      <button-list :items="socialLink" />
+      <button-list class="-type-02" :items="socialLink" />
     </section-block>
 
     <section-block>
@@ -13,6 +13,12 @@
 
       <heading level="3">Like</heading>
       <profile-list :items="likeList" />
+    </section-block>
+
+    <section-block>
+      <heading>Contact</heading>
+      <p>Please contact me via Twitter direct message.</p>
+      <button-list :items="contactLink" />
     </section-block>
 
     <section-block>
@@ -44,6 +50,7 @@ export default {
   data() {
     return {
       socialLink: [URL.twitter, URL.github],
+      contactLink: [URL.twitter],
       linkList: URL,
       skillList: SKILL,
       likeList: LIKE
