@@ -9,24 +9,10 @@
       <heading>Profile</heading>
 
       <heading level="3">Skill</heading>
-      <profile-list
-        :items="[
-          'HTML',
-          'CSS',
-          'Sass',
-          'JavaScript',
-          'TypeScript',
-          'Vue.js',
-          'Nuxt.js',
-          'Node.js',
-          'jQuery',
-          'AMP',
-          'PHP'
-        ]"
-      />
+      <profile-list :items="skillList" />
 
       <heading level="3">Like</heading>
-      <profile-list :items="['Movie', 'Game']" />
+      <profile-list :items="likeList" />
     </section-block>
 
     <section-block>
@@ -37,7 +23,7 @@
 </template>
 
 <script>
-import DEFINE from '@/assets/js/define'
+import { URL, SKILL, LIKE } from '@/assets/js/define'
 import SectionBlock from '@/components/common/SectionBlock'
 import Heading from '@/components/common/Heading'
 import ProfileList from '@/components/common/ProfileList'
@@ -57,8 +43,10 @@ export default {
   },
   data() {
     return {
-      socialLink: [DEFINE.URL.twitter, DEFINE.URL.github],
-      linkList: DEFINE.URL
+      socialLink: [URL.twitter, URL.github],
+      linkList: URL,
+      skillList: SKILL,
+      likeList: LIKE
     }
   }
 }
