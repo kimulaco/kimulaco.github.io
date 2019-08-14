@@ -1,8 +1,8 @@
 <template>
-  <div class="BuretteList">
-    <ul class="BuretteList_list">
-      <li v-for="item in items" :key="item.name" class="BuretteList_item">
-        <a :href="item.url" class="BuretteList_anchor" target="_blank">
+  <div class="LinkList">
+    <ul class="LinkList_list">
+      <li v-for="item in items" :key="item.name" class="LinkList_item">
+        <a :href="item.url" class="LinkList_anchor" target="_blank">
           <span>
             {{ item.name }}
           </span>
@@ -14,12 +14,12 @@
 
 <script>
 export default {
-  name: 'BuretteList',
+  name: 'LinkList',
   props: {
     items: {
-      type: Array,
+      type: Object,
       default() {
-        return []
+        return {}
       }
     }
   }
@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 $margin-size: 16px;
 
-.BuretteList {
+.LinkList {
   max-width: 360px;
   margin: 0 auto;
   &_list {
