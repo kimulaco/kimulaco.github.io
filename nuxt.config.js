@@ -31,7 +31,6 @@ export default {
   plugins: [],
   devModules: ['@nuxtjs/eslint-module'],
   modules: [
-    // '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
     '@nuxtjs/google-analytics'
