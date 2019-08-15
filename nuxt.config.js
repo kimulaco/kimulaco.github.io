@@ -2,6 +2,10 @@ export default {
   mode: 'universal',
   head: {
     title: 'kimulaco',
+    htmlAttrs: {
+      lang: 'en',
+      prefix: 'og: http://ogp.me/ns#'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width,initial-scale=1' },
@@ -9,7 +13,16 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'kimulaco profile site.'
-      }
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:title', property: 'og:title', content: 'kimulaco' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'kimulaco profile site.'
+      },
+      { hid: 'og:url', property: 'og:url', content: 'http://kimulaco.me' },
+      { hid: 'og:image', property: 'og:image', content: '/img/ogp.png' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }]
   },
