@@ -23,7 +23,11 @@ export default {
       },
       { hid: 'og:url', property: 'og:url', content: 'https://kimulaco.me' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'og:image', property: 'og:image', content: '/img/ogp.png' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://kimulaco.me/img/ogp.png'
+      },
       { hid: 'fb:app_id', property: 'fb:app_id', content: '2126226647500830' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }]
