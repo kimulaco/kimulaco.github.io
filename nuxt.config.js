@@ -33,7 +33,8 @@ export default {
   modules: [
     // '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/google-analytics'
   ],
   styleResources: {
     scss: ['@/assets/scss/_variable.scss', '@/assets/scss/_mixin.scss']
@@ -42,6 +43,9 @@ export default {
     google: {
       families: ['Coda:400']
     }
+  },
+  googleAnalytics: {
+    id: 'UA-145782278-1'
   },
   build: {
     extend(config, ctx) {}
