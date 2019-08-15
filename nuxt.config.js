@@ -1,7 +1,7 @@
 export default {
   mode: 'universal',
   head: {
-    title: 'kimulaco',
+    title: 'kimulaco.me',
     htmlAttrs: {
       lang: 'en',
       prefix: 'og: http://ogp.me/ns#'
@@ -15,7 +15,7 @@ export default {
         content: 'kimulaco profile site.'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:title', property: 'og:title', content: 'kimulaco' },
+      { hid: 'og:title', property: 'og:title', content: 'kimulaco.me' },
       {
         hid: 'og:description',
         property: 'og:description',
