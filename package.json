@@ -1,6 +1,6 @@
 {
   "name": "kimulaco.me",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "kimulaco",
   "private": true,
   "scripts": {
@@ -20,12 +20,12 @@
     }
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/google-analytics": "^2.2.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.8.1"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-config": "^1.1.2",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
