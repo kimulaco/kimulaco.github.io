@@ -30,7 +30,7 @@ export default {
   margin: 32px 0 28px;
   &_inner {
     display: inline-block;
-    padding: 0 10px 2px;
+    padding: 0 10px 6px;
     position: relative;
     &:after {
       content: '';

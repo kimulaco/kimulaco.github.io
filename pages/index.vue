@@ -16,6 +16,11 @@
     </section-block>
 
     <section-block>
+      <heading>Product</heading>
+      <product-list :items="productList" />
+    </section-block>
+
+    <section-block>
       <heading>Contact</heading>
       <p>Please contact me via Twitter direct message.</p>
       <button-list :items="contactLink" />
@@ -29,10 +34,11 @@
 </template>
 
 <script>
-import { URL, SKILL, LIKE } from '@/assets/js/define'
+import { URL, PRODUCT, SKILL, LIKE } from '@/assets/js/define'
 import SectionBlock from '@/components/common/SectionBlock'
 import Heading from '@/components/common/Heading'
 import ProfileList from '@/components/common/ProfileList'
+import ProductList from '@/components/common/ProductList'
 import LinkList from '@/components/common/LinkList'
 import ButtonList from '@/components/common/ButtonList'
 import HeaderContent from '@/components/parts/HeaderContent'
@@ -43,6 +49,7 @@ export default {
     SectionBlock,
     Heading,
     ProfileList,
+    ProductList,
     LinkList,
     ButtonList,
     HeaderContent
@@ -53,7 +60,8 @@ export default {
       contactLink: [URL.twitter],
       linkList: URL,
       skillList: SKILL,
-      likeList: LIKE
+      likeList: LIKE,
+      productList: PRODUCT
     }
   }
 }

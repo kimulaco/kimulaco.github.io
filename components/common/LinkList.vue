@@ -30,19 +30,19 @@ export default {
 $margin-size: 16px;
 
 .LinkList {
-  max-width: 360px;
   margin: 0 auto;
   &_list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0;
     margin: -#{$margin-size} 0 0 -#{$margin-size};
     list-style: none;
   }
   &_item {
-    flex: 0 1 calc(50% - #{$margin-size});
-    width: calc(50% - #{$margin-size});
-    max-width: calc(50% - #{$margin-size});
+    flex: 0 1 135px;
+    width: 135px;
+    max-width: 135px;
     margin: $margin-size 0 0 $margin-size;
   }
   a {
