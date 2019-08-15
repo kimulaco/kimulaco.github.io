@@ -18,6 +18,11 @@
     <section-block>
       <heading>Product</heading>
       <product-list :items="productList" />
+      <p>
+        See
+        <inline-link :href="moreProductUrl">Github</inline-link>
+        for more.
+      </p>
     </section-block>
 
     <section-block>
@@ -36,6 +41,7 @@
 <script>
 import { URL, PRODUCT, SKILL, LIKE } from '@/assets/js/define'
 import SectionBlock from '@/components/common/SectionBlock'
+import InlineLink from '@/components/common/InlineLink'
 import Heading from '@/components/common/Heading'
 import ProfileList from '@/components/common/ProfileList'
 import ProductList from '@/components/common/ProductList'
@@ -47,6 +53,7 @@ export default {
   name: 'PageHome',
   components: {
     SectionBlock,
+    InlineLink,
     Heading,
     ProfileList,
     ProductList,
@@ -61,7 +68,8 @@ export default {
       linkList: URL,
       skillList: SKILL,
       likeList: LIKE,
-      productList: PRODUCT
+      productList: PRODUCT,
+      moreProductUrl: URL.github.url
     }
   }
 }
