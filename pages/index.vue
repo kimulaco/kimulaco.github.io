@@ -21,13 +21,13 @@
       <p>
         See
         <inline-link :href="moreProductUrl">Github</inline-link>
-        for more.
+        for more!
       </p>
     </section-block>
 
     <section-block>
       <heading>Contact</heading>
-      <p>Please contact me via Twitter direct message.</p>
+      <p>Please contact me via Twitter direct message!</p>
       <button-list :items="contactLink" />
     </section-block>
 
