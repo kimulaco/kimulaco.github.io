@@ -1,7 +1,12 @@
 <template>
   <ul class="ProductList">
     <li v-for="item in items" :key="item.name" class="ProductList_item">
-      <a :href="item.url" class="ProductList_anchor" target="_blank">
+      <a
+        :href="item.url"
+        class="ProductList_anchor"
+        rel="noopener"
+        target="_blank"
+      >
         <b>{{ item.name }}</b>
         {{ item.desc }}
       </a>

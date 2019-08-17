@@ -1,5 +1,5 @@
 <template>
-  <a class="InlineLink" target="_blank" :href="href">
+  <a class="InlineLink" rel="noopener" target="_blank" :href="href">
     <span class="InlineLink_inner">
       <slot />
     </span>
