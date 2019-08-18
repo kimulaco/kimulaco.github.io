@@ -7,6 +7,7 @@
           class="LinkList_anchor"
           rel="noopener"
           target="_blank"
+          @click="onClickLink(item.name)"
         >
           <span>
             {{ item.name }}
@@ -26,6 +27,15 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  methods: {
+    onClickLink(itemName) {
+      this.$ga.event({
+        eventCategory: 'LinkList',
+        eventAction: 'click',
+        eventLabel: itemName
+      })
     }
   }
 }

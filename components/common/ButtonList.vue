@@ -6,6 +6,7 @@
         class="LinkList_anchor"
         rel="noopener"
         target="_blank"
+        @click="onClickLink(item.name)"
       >
         {{ item.name }}
       </a>
@@ -22,6 +23,15 @@ export default {
       default() {
         return []
       }
+    }
+  },
+  methods: {
+    onClickLink(itemName) {
+      this.$ga.event({
+        eventCategory: 'ButtonList',
+        eventAction: 'click',
+        eventLabel: itemName
+      })
     }
   }
 }

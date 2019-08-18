@@ -6,6 +6,7 @@
         class="ProductList_anchor"
         rel="noopener"
         target="_blank"
+        @click="onClickLink(item.name)"
       >
         <b>{{ item.name }}</b>
         {{ item.desc }}
@@ -23,6 +24,15 @@ export default {
       default() {
         return []
       }
+    }
+  },
+  methods: {
+    onClickLink(itemName) {
+      this.$ga.event({
+        eventCategory: 'ProductList',
+        eventAction: 'click',
+        eventLabel: itemName
+      })
     }
   }
 }
