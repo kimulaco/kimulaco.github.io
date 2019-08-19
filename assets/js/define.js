@@ -24,6 +24,12 @@ export const PRODUCT = [
     name: 'VanillaSmoothie.js',
     desc: 'A minimal smooth scroll library based on vanilla JavaScript.',
     url: 'https://github.com/kimulaco/vanilla-smoothie'
+  },
+  {
+    name: 'amp-custom',
+    desc:
+      'Node.js package that optimizes CSS for AMP(Accelerated Mobile Pages). There are also plugins for Gulp and PostCSS.',
+    url: 'https://github.com/kimulaco/amp-custom'
   }
 ]
 

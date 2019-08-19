@@ -56,13 +56,14 @@ $margin-size: 16px;
     padding: 10px;
     border: 2px solid $COLOR_CHARCOAL;
     border-radius: 2px;
+    line-height: 1.4;
     text-decoration: none;
     text-align: left;
   }
   b {
     display: block;
     font-size: 18px;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
   }
   &.-type-02 {
     a {
