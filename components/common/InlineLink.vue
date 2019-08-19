@@ -1,5 +1,11 @@
 <template>
-  <a class="InlineLink" target="_blank" :href="href">
+  <a
+    class="InlineLink"
+    rel="noopener"
+    target="_blank"
+    :href="href"
+    @click="onClickLink"
+  >
     <span class="InlineLink_inner">
       <slot />
     </span>
@@ -13,6 +19,15 @@ export default {
     href: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    onClickLink() {
+      this.$ga.event({
+        eventCategory: 'InlineLink',
+        eventAction: 'click',
+        eventLabel: this.$el.textContent
+      })
     }
   }
 }

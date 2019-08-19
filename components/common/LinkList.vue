@@ -2,7 +2,13 @@
   <div class="LinkList">
     <ul class="LinkList_list">
       <li v-for="item in items" :key="item.name" class="LinkList_item">
-        <a :href="item.url" class="LinkList_anchor" target="_blank">
+        <a
+          :href="item.url"
+          class="LinkList_anchor"
+          rel="noopener"
+          target="_blank"
+          @click="onClickLink(item.name)"
+        >
           <span>
             {{ item.name }}
           </span>
@@ -21,6 +27,15 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  methods: {
+    onClickLink(itemName) {
+      this.$ga.event({
+        eventCategory: 'LinkList',
+        eventAction: 'click',
+        eventLabel: itemName
+      })
     }
   }
 }
