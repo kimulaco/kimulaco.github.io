@@ -9,7 +9,9 @@
         @click="onClickLink(item.name)"
       >
         <b>{{ item.name }}</b>
+        <!-- eslint-disable vue/no-v-html -->
         <span v-html="item.desc" />
+        <!-- eslint-enable vue/no-v-html -->
       </a>
     </li>
   </ul>
