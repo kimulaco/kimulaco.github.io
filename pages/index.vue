@@ -8,11 +8,13 @@
     <section-block>
       <heading>Profile</heading>
 
+      <detail-list :items="profileList" />
+
       <heading level="3">Skill</heading>
-      <profile-list :items="skillList" />
+      <list :items="skillList" />
 
       <heading level="3">Like</heading>
-      <profile-list :items="likeList" />
+      <list :items="likeList" />
     </section-block>
 
     <section-block>
@@ -39,11 +41,12 @@
 </template>
 
 <script>
-import { URL, PRODUCT, SKILL, LIKE } from '@/assets/js/define'
+import { URL, PROFILE, SKILL, LIKE, PRODUCT } from '@/assets/js/define'
 import SectionBlock from '@/components/common/SectionBlock'
 import InlineLink from '@/components/common/InlineLink'
 import Heading from '@/components/common/Heading'
-import ProfileList from '@/components/common/ProfileList'
+import List from '@/components/common/List'
+import DetailList from '@/components/common/DetailList'
 import ProductList from '@/components/common/ProductList'
 import LinkList from '@/components/common/LinkList'
 import ButtonList from '@/components/common/ButtonList'
@@ -55,7 +58,8 @@ export default {
     SectionBlock,
     InlineLink,
     Heading,
-    ProfileList,
+    List,
+    DetailList,
     ProductList,
     LinkList,
     ButtonList,
@@ -64,12 +68,13 @@ export default {
   data() {
     return {
       socialLink: [URL.twitter, URL.github],
-      contactLink: [URL.twitter],
-      linkList: URL,
+      profileList: PROFILE,
       skillList: SKILL,
       likeList: LIKE,
       productList: PRODUCT,
-      moreProductUrl: URL.github.url
+      moreProductUrl: URL.github.url,
+      contactLink: [URL.twitter],
+      linkList: URL
     }
   }
 }

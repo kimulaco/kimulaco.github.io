@@ -1,7 +1,7 @@
 <template>
-  <div class="ProfileList">
-    <ul class="ProfileList_link">
-      <li v-for="item in items" :key="item" class="ProfileList_item">
+  <div class="List">
+    <ul class="List_link">
+      <li v-for="item in items" :key="item" class="List_item">
         {{ item }}
       </li>
     </ul>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'ProfileList',
+  name: 'List',
   props: {
     items: {
       type: Array,
@@ -26,7 +26,7 @@ export default {
 $margin-top-size: 10px;
 $margin-left-size: 20px;
 
-.ProfileList {
+.List {
   max-width: 540px;
   margin: 0 auto;
   &_link {
