@@ -26,9 +26,15 @@ export const PRODUCT = [
     url: 'https://github.com/kimulaco/vanilla-smoothie'
   },
   {
+    name: 'Quiz of kamigami',
+    desc:
+      'The quiz about god created by scraping Wikipedia. <strong>This is joke site.</strong>',
+    url: 'https://github.com/kimulaco/amp-custom'
+  },
+  {
     name: 'amp-custom',
     desc:
-      'Node.js package that optimizes CSS for AMP(Accelerated Mobile Pages). There are also plugins for Gulp and PostCSS.',
+      'Node.js package that optimizes CSS for AMP(Accelerated Mobile Pages).<br>There are also plugins for Gulp and PostCSS.',
     url: 'https://github.com/kimulaco/amp-custom'
   }
 ]

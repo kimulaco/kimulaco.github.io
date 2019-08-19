@@ -9,7 +9,7 @@
         @click="onClickLink(item.name)"
       >
         <b>{{ item.name }}</b>
-        {{ item.desc }}
+        <span v-html="item.desc" />
       </a>
     </li>
   </ul>
@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $margin-size: 16px;
 
 .ProductList {
