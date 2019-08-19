@@ -19,6 +19,10 @@ export const PROFILE = [
     value: 'kimulaco'
   },
   {
+    title: 'Job',
+    value: 'Create Web, Application'
+  },
+  {
     title: 'Place',
     value: 'Tokyo'
   }
