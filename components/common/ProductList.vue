@@ -61,6 +61,15 @@ $margin-size: 16px;
     line-height: 1.4;
     text-decoration: none;
     text-align: left;
+    transition: 0.3s ease;
+    @include active() {
+      color: $COLOR_WHITE;
+      background-color: $COLOR_CHARCOAL;
+      box-shadow: 0 2px 4px rgba($COLOR_CHARCOAL, 0.2);
+      strong {
+        color: #f57d68;
+      }
+    }
   }
   b {
     display: block;

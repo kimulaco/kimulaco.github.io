@@ -74,7 +74,7 @@ export const PRODUCT = [
     name: 'Quiz of kamigami',
     desc:
       'The quiz about god created by scraping Wikipedia. <strong>This is joke site.</strong>',
-    url: 'https://github.com/kimulaco/amp-custom'
+    url: 'https://kimulaco.github.io/kamigami-quiz/'
   },
   {
     name: 'amp-custom',
