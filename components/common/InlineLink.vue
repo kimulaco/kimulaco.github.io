@@ -39,6 +39,14 @@ export default {
     display: inline-block;
     padding: 0 2px;
     border-bottom: 1px solid;
+    transition: 0.1s ease;
+  }
+  @include active() {
+    .InlineLink {
+      &_inner {
+        border-color: transparent;
+      }
+    }
   }
 }
 </style>

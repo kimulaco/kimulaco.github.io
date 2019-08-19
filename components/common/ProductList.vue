@@ -9,7 +9,9 @@
         @click="onClickLink(item.name)"
       >
         <b>{{ item.name }}</b>
-        {{ item.desc }}
+        <!-- eslint-disable vue/no-v-html -->
+        <span v-html="item.desc" />
+        <!-- eslint-enable vue/no-v-html -->
       </a>
     </li>
   </ul>
@@ -38,7 +40,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $margin-size: 16px;
 
 .ProductList {
@@ -56,13 +58,23 @@ $margin-size: 16px;
     padding: 10px;
     border: 2px solid $COLOR_CHARCOAL;
     border-radius: 2px;
+    line-height: 1.4;
     text-decoration: none;
     text-align: left;
+    transition: 0.3s ease;
+    @include active() {
+      color: $COLOR_WHITE;
+      background-color: $COLOR_CHARCOAL;
+      box-shadow: 0 2px 4px rgba($COLOR_CHARCOAL, 0.2);
+      strong {
+        color: #f57d68;
+      }
+    }
   }
   b {
     display: block;
     font-size: 18px;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
   }
   &.-type-02 {
     a {

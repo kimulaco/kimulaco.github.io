@@ -13,17 +13,18 @@ export const URL = {
   }
 }
 
-export const PRODUCT = [
+export const PROFILE = [
   {
-    name: 'Aqua Theme',
-    desc: 'Visual Studio Code theme.',
-    url:
-      'https://marketplace.visualstudio.com/items?itemName=kimulaco.vscode-aqua-theme'
+    title: 'Handle Name',
+    value: 'kimulaco'
   },
   {
-    name: 'VanillaSmoothie.js',
-    desc: 'A minimal smooth scroll library based on vanilla JavaScript.',
-    url: 'https://github.com/kimulaco/vanilla-smoothie'
+    title: 'Job',
+    value: 'Create Web, Application'
+  },
+  {
+    title: 'Place',
+    value: 'Tokyo'
   }
 ]
 
@@ -55,4 +56,30 @@ export const LIKE = [
   'METAL GEAR',
   'AKIRA',
   'Dead by Daylight'
+]
+
+export const PRODUCT = [
+  {
+    name: 'Aqua Theme',
+    desc: 'Visual Studio Code theme.',
+    url:
+      'https://marketplace.visualstudio.com/items?itemName=kimulaco.vscode-aqua-theme'
+  },
+  {
+    name: 'VanillaSmoothie.js',
+    desc: 'A minimal smooth scroll library based on vanilla JavaScript.',
+    url: 'https://github.com/kimulaco/vanilla-smoothie'
+  },
+  {
+    name: 'Quiz of kamigami',
+    desc:
+      'The quiz about god created by scraping Wikipedia. <strong>This is joke site.</strong>',
+    url: 'https://kimulaco.github.io/kamigami-quiz/'
+  },
+  {
+    name: 'amp-custom',
+    desc:
+      'Node.js package that optimizes CSS for AMP(Accelerated Mobile Pages).<br>There are also plugins for Gulp and PostCSS.',
+    url: 'https://github.com/kimulaco/amp-custom'
+  }
 ]

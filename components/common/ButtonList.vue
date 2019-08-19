@@ -59,11 +59,20 @@ $margin-size: 16px;
     border-radius: 2px;
     text-decoration: none;
     text-align: center;
+    transition: 0.3s ease;
+    @include active() {
+      color: $COLOR_WHITE;
+      background-color: $COLOR_CHARCOAL;
+    }
   }
   &.-type-02 {
     a {
       color: $COLOR_WHITE;
       border-color: $COLOR_WHITE;
+      @include active() {
+        color: $COLOR_CHARCOAL;
+        background-color: $COLOR_WHITE;
+      }
     }
   }
 }
