@@ -59,7 +59,7 @@ $margin-size: 16px;
     border-radius: 2px;
     text-decoration: none;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease;
     @include active() {
       color: $COLOR_WHITE;
       background-color: $COLOR_CHARCOAL;

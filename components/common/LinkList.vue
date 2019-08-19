@@ -70,6 +70,12 @@ $margin-size: 16px;
       display: inline-block;
       padding: 0 5px;
       border-bottom: 1px solid;
+      transition: 0.3s ease;
+    }
+    @include active() {
+      span {
+        border-color: transparent;
+      }
     }
   }
 }
