@@ -9,5 +9,6 @@ kimulaco's profile site.
 ## Use
 
 - Nuxt.js
+- PWA
 - ESLint and Prettier
 - Jest

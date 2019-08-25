@@ -55,9 +55,9 @@ $margin-size: 16px;
     list-style: none;
   }
   &_item {
-    flex: 0 1 135px;
-    width: 135px;
-    max-width: 135px;
+    flex: 0 1 125px;
+    width: 125px;
+    max-width: 125px;
     margin: $margin-size 0 0 $margin-size;
   }
   a {

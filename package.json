@@ -1,6 +1,6 @@
 {
   "name": "kimulaco.me",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "kimulaco",
   "private": true,
   "scripts": {
@@ -21,27 +21,32 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.16",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.8.1"
+    "nuxt": "^2.8.1",
+    "nuxt-basic-auth-module": "^1.2.0"
   },
   "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/eslint-config": "^1.1.2",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.8.0",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
+    "babel-jest": "^24.9.0",
+    "contentful": "^7.9.1",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.3",
     "eslint-plugin-prettier": "^3.1.0",
-    "husky": "^3.0.3",
-    "jest": "^24.8.0",
-    "lint-staged": "^9.2.1",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.3",
     "node-sass": "^4.12.0",
     "nuxt-webfontloader": "^1.1.0",
     "prettier": "^1.18.2",
-    "sass-loader": "^7.2.0",
+    "sass-loader": "^7.3.1",
     "vue-jest": "^4.0.0-0"
   }
 }
