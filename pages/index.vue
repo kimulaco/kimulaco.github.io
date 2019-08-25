@@ -83,7 +83,7 @@ export default {
       productList: productEntries
     }
   },
-  created() {
+  mounted() {
     if (this.$route.query.hasOwnProperty('standalone')) {
       this.$ga.event({
         eventCategory: 'PWA',
