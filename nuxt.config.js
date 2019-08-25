@@ -1,4 +1,19 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
+const {
+  CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_PUBLIC_PRODUCT
+} = process.env
+
 export default {
+  env: {
+    CONTENTFUL_SPACE_ID,
+    CONTENTFUL_ACCESS_TOKEN,
+    CONTENTFUL_PUBLIC_PRODUCT
+  },
   mode: 'universal',
   head: {
     title: 'kimulaco.me',
@@ -34,7 +49,7 @@ export default {
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
-  plugins: [],
+  // plugins: ['@/plugins/contentful'],
   devModules: ['@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',

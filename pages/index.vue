@@ -41,7 +41,8 @@
 </template>
 
 <script>
-import { URL, PROFILE, SKILL, LIKE, PRODUCT } from '@/assets/js/define'
+import { URL, PROFILE, SKILL, LIKE } from '@/assets/js/define'
+import { getEntries, entryId } from '@/plugins/contentful'
 import SectionBlock from '@/components/common/SectionBlock'
 import InlineLink from '@/components/common/InlineLink'
 import Heading from '@/components/common/Heading'
@@ -71,10 +72,15 @@ export default {
       profileList: PROFILE,
       skillList: SKILL,
       likeList: LIKE,
-      productList: PRODUCT,
       moreProductUrl: URL.github.url,
       contactLink: [URL.twitter],
       linkList: URL
+    }
+  },
+  async asyncData() {
+    const productEntries = await getEntries(entryId.public.product)
+    return {
+      productList: productEntries
     }
   }
 }
