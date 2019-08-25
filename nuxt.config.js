@@ -5,7 +5,9 @@ if (process.env.NODE_ENV !== 'production') {
 const {
   CONTENTFUL_SPACE_ID,
   CONTENTFUL_ACCESS_TOKEN,
-  CONTENTFUL_PUBLIC_PRODUCT
+  CONTENTFUL_PUBLIC_PRODUCT,
+  PRIVATE_PAGE_USER,
+  PRIVATE_PAGE_PASS
 } = process.env
 
 export default {
@@ -53,19 +55,25 @@ export default {
   devModules: ['@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    'nuxt-basic-auth-module',
+    'nuxt-webfontloader'
   ],
   styleResources: {
     scss: ['@/assets/scss/_variable.scss', '@/assets/scss/_mixin.scss']
+  },
+  googleAnalytics: {
+    id: 'UA-145782278-1'
+  },
+  basic: {
+    name: PRIVATE_PAGE_USER,
+    pass: PRIVATE_PAGE_PASS,
+    match: /\/private/
   },
   webfontloader: {
     google: {
       families: ['Coda:400']
     }
-  },
-  googleAnalytics: {
-    id: 'UA-145782278-1'
   },
   build: {
     extend(config, ctx) {}
