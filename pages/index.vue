@@ -82,6 +82,14 @@ export default {
     return {
       productList: productEntries
     }
+  },
+  created() {
+    if (this.$route.query.hasOwnProperty('standalone')) {
+      this.$ga.event({
+        eventCategory: 'PWA',
+        eventAction: 'launch'
+      })
+    }
   }
 }
 </script>

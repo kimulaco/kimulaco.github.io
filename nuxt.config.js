@@ -69,7 +69,7 @@ export default {
   manifest: {
     name: SITE.title,
     lang: 'en',
-    start_url: '/',
+    start_url: '/?standalone',
     theme_color: SITE.color,
     background_color: '#ffffff',
     display: 'standalone',
