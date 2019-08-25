@@ -1,3 +1,11 @@
+export const SITE = {
+  title: 'kimulaco.me',
+  url: 'https://kimulaco.me',
+  description: 'kimulaco profile site.',
+  facebookId: '2126226647500830',
+  color: '#333333'
+}
+
 export const URL = {
   twitter: {
     name: 'Twitter',

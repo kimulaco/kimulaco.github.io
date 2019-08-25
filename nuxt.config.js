@@ -1,3 +1,5 @@
+import { SITE } from './assets/js/define'
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
@@ -18,7 +20,7 @@ export default {
   },
   mode: 'universal',
   head: {
-    title: 'kimulaco.me',
+    title: SITE.title,
     htmlAttrs: {
       lang: 'en',
       prefix: 'og: http://ogp.me/ns#'
@@ -32,20 +34,21 @@ export default {
         content: 'kimulaco profile site.'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:title', property: 'og:title', content: 'kimulaco.me' },
+      { hid: 'og:title', property: 'og:title', content: SITE.title },
       {
         hid: 'og:description',
         property: 'og:description',
         content: 'kimulaco profile site.'
       },
-      { hid: 'og:url', property: 'og:url', content: 'https://kimulaco.me' },
+      { hid: 'og:url', property: 'og:url', content: SITE.url },
       { name: 'twitter:card', content: 'summary_large_image' },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://kimulaco.me/img/ogp.png'
+        content: `${SITE.url}/img/ogp.png`
       },
-      { hid: 'fb:app_id', property: 'fb:app_id', content: '2126226647500830' }
+      { hid: 'fb:app_id', property: 'fb:app_id', content: SITE.facebookId },
+      { hid: 'fb:app_id', property: 'theme-color', content: SITE.color }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }]
   },
@@ -55,12 +58,28 @@ export default {
   devModules: ['@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/pwa',
     '@nuxtjs/google-analytics',
     'nuxt-basic-auth-module',
     'nuxt-webfontloader'
   ],
   styleResources: {
     scss: ['@/assets/scss/_variable.scss', '@/assets/scss/_mixin.scss']
+  },
+  manifest: {
+    name: SITE.title,
+    lang: 'en',
+    start_url: '/',
+    theme_color: SITE.color,
+    background_color: '#ffffff',
+    display: 'standalone',
+    icons: [
+      {
+        src: '/img/icon.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ]
   },
   googleAnalytics: {
     id: 'UA-145782278-1'
