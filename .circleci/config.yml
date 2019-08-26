@@ -29,6 +29,7 @@ jobs:
     executor:
       name: default
     steps:
+      - checkout
       - attach_workspace:
           at: ~/workspace
       - run: yarn lint
