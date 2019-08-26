@@ -25,7 +25,7 @@ jobs:
           root: ~/workspace
           paths:
             - node_modules
-  build:
+  test:
     executor:
       name: default
     steps:
@@ -33,7 +33,18 @@ jobs:
       - attach_workspace:
           at: ~/workspace
       - run: yarn lint
+  build:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/workspace
       - run: yarn generate
+      - persist_to_workspace:
+          root: ~/workspace
+          paths:
+            - dist
   deploy:
     executor:
       name: default
@@ -41,16 +52,19 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/workspace
-      - run: yarn add netlify-cli
       - run: npx netlify deploy --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID
 
 workflows:
   build:
     jobs:
       - init
+      - test:
+          requires:
+            - init
       - build:
           requires:
             - init
       - deploy:
           requires:
+            - test
             - build
