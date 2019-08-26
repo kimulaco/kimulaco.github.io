@@ -34,6 +34,15 @@ jobs:
           at: ~/workspace
       - run: yarn lint
       - run: yarn generate
+  deploy:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/workspace
+      - run: yarn add netlify-cli
+      - run: npx netlify deploy --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID
 
 workflows:
   build:
@@ -42,3 +51,6 @@ workflows:
       - build:
           requires:
             - init
+      - deploy:
+          requires:
+            - build
