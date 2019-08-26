@@ -38,6 +38,6 @@ workflows:
   build:
     jobs:
       - init
-      - build
+      - build:
           requires:
             - init
