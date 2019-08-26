@@ -11,6 +11,17 @@ before_script:
 script:
   - yarn lint
 
+before_deploy:
+  - yarn add netlify-cli
+  - yarn generate
+
+deploy:
+  provider: script
+  script: npx netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir dist
+  skip_cleanup: true
+  on:
+    branch: feature/ci
+
 notifications:
   slack:
     secure: "VUby2FIu9G4tXDx5KWYMCvslKY1NFGdfZ04Ww62DeGZLuB2maaCBwrn2JCRp/9ywnhHFl6Bs/NJMUKMYvB+HxGC70pdogtdabh4hdc8vsmvPBQL7AfbjViZY4S87EqtujhthQU4oTqf/F+eHq6t//OQCLvAIDP0Q/v8F5HFEmbsyTB2BDUMmBpXCDCBXZNp6VUIH8Sq/LgwKkaKABibHLhYyWYHe1T2xtgcomQ1UJ+1OihLXOkeKakYdCXtWEUx6udQd63RHXNAYIfXYYfzxy9TRTIBVSC+JBbXtFP8+VsX/hJB3TSw9Ia3BJIgKl873cV0WvFw2csfo44igXkL+ikXatEICKreLAKl7qMmDt7TRWkbnVATLvzT+29cG9oOecemg4/o0D9oNcBp/kCC0hjQVim92PcgkFRZJGZgVUVtheqBrEy/mLcqGhnLpxqXKDmvuG2WcSqkO8rRkYcSHm6JaL4DSZvuMSFt8ZTD6h/+tnnf19HpKxNyb40tVf4t44YmtCyBbKBO4gMGFem8h7YbxLQjEk8G+VC5q0CCHNMzH7/EtYoJYqZHxXj7dMhWziJNh/NWGQcrq2+Bd/vdQb92261hADERovy/Gx5+wy2MO88yrF+aMWqmDoVV3Skd998TR8TiNGSxgverCbhXtb3nl7ktgZX9AbUCEJqziLps="
