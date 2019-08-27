@@ -1,14 +1,14 @@
 <template>
   <ul class="ProductList">
-    <li v-for="item in items" :key="item.title" class="ProductList_item">
+    <li v-for="item in items" :key="item.name" class="ProductList_item">
       <a
         :href="item.url"
         class="ProductList_anchor"
         rel="noopener"
         target="_blank"
-        @click="onClickLink(item.title)"
+        @click="onClickLink(item.name)"
       >
-        <b>{{ item.title }}</b>
+        <b>{{ item.name }}</b>
         <!-- eslint-disable vue/no-v-html -->
         <span v-html="item.desc" />
         <!-- eslint-enable vue/no-v-html -->

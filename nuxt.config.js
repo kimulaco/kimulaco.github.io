@@ -1,23 +1,6 @@
 import { SITE } from './assets/js/define'
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
-const {
-  CONTENTFUL_SPACE_ID,
-  CONTENTFUL_ACCESS_TOKEN,
-  CONTENTFUL_PUBLIC_PRODUCT,
-  PRIVATE_PAGE_USER,
-  PRIVATE_PAGE_PASS
-} = process.env
-
 export default {
-  env: {
-    CONTENTFUL_SPACE_ID,
-    CONTENTFUL_ACCESS_TOKEN,
-    CONTENTFUL_PUBLIC_PRODUCT
-  },
   mode: 'universal',
   head: {
     title: SITE.title,
@@ -50,18 +33,19 @@ export default {
       { hid: 'fb:app_id', property: 'fb:app_id', content: SITE.facebookId },
       { hid: 'fb:app_id', property: 'theme-color', content: SITE.color }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }]
+    link: [
+      { rel: 'preload', as: 'font', href: '/font/Coda.woff2' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
+    ]
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
-  // plugins: ['@/plugins/contentful'],
+  plugins: [],
   devModules: ['@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
-    'nuxt-basic-auth-module',
-    'nuxt-webfontloader'
+    '@nuxtjs/google-analytics'
   ],
   styleResources: {
     scss: ['@/assets/scss/_variable.scss', '@/assets/scss/_mixin.scss']
@@ -83,16 +67,6 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-145782278-1'
-  },
-  basic: {
-    name: PRIVATE_PAGE_USER,
-    pass: PRIVATE_PAGE_PASS,
-    match: /\/private/
-  },
-  webfontloader: {
-    google: {
-      families: ['Coda:400']
-    }
   },
   build: {
     extend(config, ctx) {}
