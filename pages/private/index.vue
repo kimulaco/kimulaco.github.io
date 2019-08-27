@@ -6,7 +6,6 @@
     </section-block>
 
     <section-block>
-      <p>Welcome private page.</p>
       <p>coming soon.</p>
     </section-block>
   </div>
