@@ -46,7 +46,6 @@ export default {
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
-  plugins: [],
   buildModules: ['@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
@@ -75,6 +74,25 @@ export default {
     id: 'UA-145782278-1'
   },
   build: {
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
+    },
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true
+    },
+    extractCSS: true,
     extend(config, ctx) {}
   }
 }
