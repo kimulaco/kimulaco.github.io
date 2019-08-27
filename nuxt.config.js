@@ -74,19 +74,6 @@ export default {
     id: 'UA-145782278-1'
   },
   build: {
-    html: {
-      minify: {
-        collapseBooleanAttributes: true,
-        decodeEntities: true,
-        minifyCSS: true,
-        minifyJS: true,
-        processConditionalComments: true,
-        removeEmptyAttributes: true,
-        removeRedundantAttributes: true,
-        trimCustomFragments: true,
-        useShortDoctype: true
-      }
-    },
     splitChunks: {
       layouts: true,
       pages: true,
