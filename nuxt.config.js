@@ -16,7 +16,7 @@ export default {
         name: 'description',
         content: 'kimulaco profile site.'
       },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { property: 'og:type', content: 'website' },
       { hid: 'og:title', property: 'og:title', content: SITE.title },
       {
         hid: 'og:description',
@@ -30,18 +30,23 @@ export default {
         property: 'og:image',
         content: `${SITE.url}/img/ogp.png`
       },
-      { hid: 'fb:app_id', property: 'fb:app_id', content: SITE.facebookId },
-      { hid: 'fb:app_id', property: 'theme-color', content: SITE.color }
+      { property: 'fb:app_id', content: SITE.facebookId },
+      { property: 'theme-color', content: SITE.color }
     ],
     link: [
-      { rel: 'preload', as: 'font', href: '/font/Coda.woff2' },
+      {
+        rel: 'preload',
+        as: 'font',
+        href: '/font/Coda.woff2',
+        type: 'font/woff2',
+        crossorigin: true
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
     ]
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
-  plugins: [],
-  devModules: ['@nuxtjs/eslint-module'],
+  buildModules: ['@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
@@ -69,6 +74,12 @@ export default {
     id: 'UA-145782278-1'
   },
   build: {
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true
+    },
+    extractCSS: true,
     extend(config, ctx) {}
   }
 }
