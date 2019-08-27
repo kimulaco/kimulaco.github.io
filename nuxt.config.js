@@ -49,8 +49,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
     '@nuxtjs/google-analytics',
-    'nuxt-basic-auth-module',
-    'nuxt-webfontloader'
+    'nuxt-basic-auth-module'
   ],
   styleResources: {
     scss: ['@/assets/scss/_variable.scss', '@/assets/scss/_mixin.scss']
@@ -77,11 +76,6 @@ export default {
     name: PRIVATE_PAGE_USER,
     pass: PRIVATE_PAGE_PASS,
     match: /\/private/
-  },
-  webfontloader: {
-    google: {
-      families: ['Coda:400']
-    }
   },
   build: {
     extend(config, ctx) {}
