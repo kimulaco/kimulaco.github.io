@@ -11828,6 +11828,14 @@ stringify-object@^3.3.0:
     is-obj "^1.0.1"
     is-regexp "^1.0.0"
 
+strip-ansi-cli@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/strip-ansi-cli/-/strip-ansi-cli-2.0.0.tgz#0fdd42abce832539bf72ff91392a71ab3546208c"
+  integrity sha1-D91Cq86DJTm/cv+ROSpxqzVGIIw=
+  dependencies:
+    meow "^3.7.0"
+    strip-ansi "^4.0.0"
+
 strip-ansi@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-0.3.0.tgz#25f48ea22ca79187f3174a4db8759347bb126220"
