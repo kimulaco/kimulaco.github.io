@@ -39,7 +39,10 @@ export default {
       { hid: 'fb:app_id', property: 'fb:app_id', content: SITE.facebookId },
       { hid: 'fb:app_id', property: 'theme-color', content: SITE.color }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }]
+    link: [
+      { rel: 'preload', as: 'font', href: '/font/Coda.woff2' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
+    ]
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
