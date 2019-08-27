@@ -52,7 +52,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/workspace
-      - run: npx netlify deploy --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID
+      - run: npx netlify deploy --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID > netlify.log
   deploy_prod:
     executor:
       name: default
@@ -60,7 +60,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/workspace
-      - run: npx netlify deploy --prod --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID
+      - run: npx netlify deploy --prod --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID > netlify.log
 
 workflows:
   main:
