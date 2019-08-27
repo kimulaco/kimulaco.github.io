@@ -34,7 +34,13 @@ export default {
       { hid: 'fb:app_id', property: 'theme-color', content: SITE.color }
     ],
     link: [
-      { rel: 'preload', as: 'font', href: '/font/Coda.woff2' },
+      {
+        rel: 'preload',
+        as: 'font',
+        href: '/font/Coda.woff2',
+        type: 'font/woff2',
+        crossorigin: true
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
     ]
   },
