@@ -45,7 +45,7 @@ jobs:
           root: ~/workspace
           paths:
             - dist
-  deploy:
+  deploy_dev:
     executor:
       name: default
     steps:
@@ -53,9 +53,17 @@ jobs:
       - attach_workspace:
           at: ~/workspace
       - run: npx netlify deploy --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID
+  deploy_prod:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/workspace
+      - run: npx netlify deploy --prod --dir dist --auth $NETLIFY_ACCESS_TOKEN --site $NETLIFY_SITE_ID
 
 workflows:
-  build:
+  main:
     jobs:
       - init
       - test:
@@ -64,7 +72,17 @@ workflows:
       - build:
           requires:
             - init
-      - deploy:
+      - deploy_dev:
           requires:
             - test
             - build
+          filters:
+            branches:
+              only: /^(?!master).+$/
+      - deploy_prod:
+          requires:
+            - test
+            - build
+          filters:
+            branches:
+              only: master
