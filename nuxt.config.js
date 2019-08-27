@@ -4,8 +4,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-const { PRIVATE_PAGE_USER, PRIVATE_PAGE_PASS } = process.env
-
 export default {
   mode: 'universal',
   head: {
@@ -74,11 +72,6 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-145782278-1'
-  },
-  basic: {
-    name: PRIVATE_PAGE_USER,
-    pass: PRIVATE_PAGE_PASS,
-    match: /\/private/
   },
   build: {
     extend(config, ctx) {}
