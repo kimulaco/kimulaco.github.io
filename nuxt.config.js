@@ -16,7 +16,7 @@ export default {
         name: 'description',
         content: 'kimulaco profile site.'
       },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { property: 'og:type', content: 'website' },
       { hid: 'og:title', property: 'og:title', content: SITE.title },
       {
         hid: 'og:description',
@@ -30,8 +30,8 @@ export default {
         property: 'og:image',
         content: `${SITE.url}/img/ogp.png`
       },
-      { hid: 'fb:app_id', property: 'fb:app_id', content: SITE.facebookId },
-      { hid: 'fb:app_id', property: 'theme-color', content: SITE.color }
+      { property: 'fb:app_id', content: SITE.facebookId },
+      { property: 'theme-color', content: SITE.color }
     ],
     link: [
       {
