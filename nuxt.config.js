@@ -1,9 +1,5 @@
 import { SITE } from './assets/js/define'
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
 export default {
   mode: 'universal',
   head: {
@@ -49,8 +45,7 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
-    'nuxt-basic-auth-module'
+    '@nuxtjs/google-analytics'
   ],
   styleResources: {
     scss: ['@/assets/scss/_variable.scss', '@/assets/scss/_mixin.scss']
