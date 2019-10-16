@@ -46,7 +46,7 @@ export default {
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
-  buildModules: ['@nuxtjs/eslint-module'],
+  buildModules: ['@nuxtjs/stylelint-module', '@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
