@@ -10,7 +10,7 @@
     "generate": "nuxt generate",
     "lint": "npm-run-all -p lint:*",
     "lint:script": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.scss **/*.vue --config .stylelintrc.js"
+    "lint:style": "stylelint src/**/*.scss src/**/*.vue --config .stylelintrc.js"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"

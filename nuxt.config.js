@@ -1,4 +1,4 @@
-import { SITE } from './assets/js/define'
+import { SITE } from './src/assets/js/define'
 
 export default {
   mode: 'universal',
@@ -73,6 +73,7 @@ export default {
   googleAnalytics: {
     id: 'UA-145782278-1'
   },
+  srcDir: 'src',
   build: {
     splitChunks: {
       layouts: true,
