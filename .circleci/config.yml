@@ -25,7 +25,7 @@ jobs:
           root: ~/workspace
           paths:
             - node_modules
-  test:
+  lint:
     executor:
       name: default
     steps:
@@ -70,7 +70,7 @@ workflows:
   main:
     jobs:
       - init
-      - test:
+      - lint:
           requires:
             - init
       - build:
@@ -78,14 +78,14 @@ workflows:
             - init
       - deploy_dev:
           requires:
-            - test
+            - lint
             - build
           filters:
             branches:
               only: /^(?!master).+$/
       - deploy_prod:
           requires:
-            - test
+            - lint
             - build
           filters:
             branches:
