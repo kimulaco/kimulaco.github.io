@@ -1,4 +1,6 @@
-import { SITE } from './assets/js/define'
+import Sass from 'sass'
+import Fiber from 'fibers'
+import { SITE } from './src/assets/js/define'
 
 export default {
   mode: 'universal',
@@ -46,7 +48,7 @@ export default {
   },
   loading: false,
   css: ['normalize.css', '@/assets/scss/base.scss'],
-  buildModules: ['@nuxtjs/eslint-module'],
+  buildModules: ['@nuxtjs/stylelint-module', '@nuxtjs/eslint-module'],
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
@@ -73,6 +75,7 @@ export default {
   googleAnalytics: {
     id: 'UA-145782278-1'
   },
+  srcDir: 'src',
   build: {
     splitChunks: {
       layouts: true,
@@ -80,6 +83,13 @@ export default {
       commons: true
     },
     extractCSS: true,
-    extend(config, ctx) {}
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    }
   }
 }

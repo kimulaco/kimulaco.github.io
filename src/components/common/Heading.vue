@@ -32,7 +32,7 @@ export default {
     display: inline-block;
     padding: 0 10px 6px;
     position: relative;
-    &:after {
+    &::after {
       content: '';
       display: block;
       background: $COLOR_CHARCOAL;
@@ -52,7 +52,7 @@ h3.Heading {
   font-size: 24px;
   margin: 32px 0 16px;
   .Heading_inner {
-    &:after {
+    &::after {
       display: none;
     }
   }
