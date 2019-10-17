@@ -1,3 +1,5 @@
+import Sass from 'sass'
+import Fiber from 'fibers'
 import { SITE } from './src/assets/js/define'
 
 export default {
@@ -81,6 +83,13 @@ export default {
       commons: true
     },
     extractCSS: true,
-    extend(config, ctx) {}
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    }
   }
 }
