@@ -28,7 +28,7 @@ export const PROFILE = [
   },
   {
     title: 'Job',
-    value: 'Create Web, Application'
+    value: 'Front-end Engineer'
   },
   {
     title: 'Place',
@@ -44,6 +44,7 @@ export const SKILL = [
   'TypeScript',
   'Vue.js',
   'Nuxt.js',
+  'Stencil.js',
   'Node.js',
   'jQuery',
   'Jest',
@@ -74,9 +75,9 @@ export const PRODUCT = [
       'https://marketplace.visualstudio.com/items?itemName=kimulaco.vscode-aqua-theme'
   },
   {
-    name: 'VanillaSmoothie.js',
+    name: 'vanilla-smoothie.js',
     desc: 'A minimal smooth scroll library based on vanilla JavaScript.',
-    url: 'https://github.com/kimulaco/vanilla-smoothie'
+    url: 'https://kimulaco.github.io/vanilla-smoothie/'
   },
   {
     name: 'Quiz of kamigami',

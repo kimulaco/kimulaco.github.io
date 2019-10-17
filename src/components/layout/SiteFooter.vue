@@ -23,6 +23,7 @@ export default {
   text-align: center;
   &_inner {
     @include reset-child-margin();
+
     min-width: $CONTENT_MIN_WIDTH;
     max-width: $CONTENT_MAX_WIDTH;
     padding: 20px 10px;
