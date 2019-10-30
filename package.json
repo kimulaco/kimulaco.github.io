@@ -21,10 +21,10 @@
     }
   },
   "dependencies": {
-    "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/google-analytics": "^2.2.1",
     "@nuxtjs/pwa": "^3.0.0-beta.16",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.10.1"
+    "nuxt": "^2.10.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.1.2",
@@ -32,23 +32,23 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.0.1",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-nuxt": ">=0.4.3",
     "eslint-plugin-prettier": "^3.1.1",
-    "fibers": "^4.0.1",
+    "fibers": "^4.0.2",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
-    "netlify-cli": "^2.19.0",
+    "netlify-cli": "^2.20.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "prettier-stylelint": "^0.4.2",
-    "sass": "^1.23.0",
+    "sass": "^1.23.2",
     "sass-loader": "^8.0.0",
     "strip-ansi-cli": "^2.0.0",
     "stylelint": "^11.1.1",
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.11.1"
+    "stylelint-scss": "^3.12.0"
   }
 }
