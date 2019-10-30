@@ -15,6 +15,10 @@ export const URL = {
     name: 'GitHub',
     url: 'https://github.com/kimulaco'
   },
+  qiita: {
+    name: 'Qiita',
+    url: 'https://qiita.com/kimulaco'
+  },
   cssbattle: {
     name: 'CSSBattle',
     url: 'https://cssbattle.dev/player/kimulaco'
