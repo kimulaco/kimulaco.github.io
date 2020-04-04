@@ -73,7 +73,7 @@ export default {
     ]
   },
   googleAnalytics: {
-    id: 'UA-145782278-1'
+    id: 'UA-162767979-1'
   },
   srcDir: 'src',
   build: {
