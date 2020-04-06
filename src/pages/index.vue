@@ -67,7 +67,7 @@ export default {
   },
   data() {
     return {
-      socialLink: [URL.twitter, URL.github, URL.qiita],
+      socialLink: [URL.blog, URL.twitter, URL.github],
       profileList: PROFILE,
       skillList: SKILL,
       likeList: LIKE,

@@ -7,6 +7,10 @@ export const SITE = {
 }
 
 export const URL = {
+  blog: {
+    name: 'Blog',
+    url: 'https://blog.kimulaco.me/'
+  },
   twitter: {
     name: 'Twitter',
     url: 'https://twitter.com/kimulaco'
@@ -14,10 +18,6 @@ export const URL = {
   github: {
     name: 'GitHub',
     url: 'https://github.com/kimulaco'
-  },
-  qiita: {
-    name: 'Qiita',
-    url: 'https://qiita.com/kimulaco'
   },
   cssbattle: {
     name: 'CSSBattle',
@@ -66,12 +66,15 @@ export const LIKE = [
   'Manga',
   'Game',
   'KOJIMA PRODUCTIONS',
-  'METAL GEAR',
-  'AKIRA',
   'Dead by Daylight'
 ]
 
 export const PRODUCT = [
+  {
+    name: 'kimulaco blog',
+    desc: "kimulaco's tech blog (Japanese).",
+    url: 'https://blog.kimulaco.me/'
+  },
   {
     name: 'Aqua Theme',
     desc: 'Visual Studio Code theme.',
