@@ -44,6 +44,13 @@ export default {
         crossorigin: true
       },
       { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }
+    ],
+    script: [
+      {
+        'data-ad-client': 'ca-pub-9857491267710655',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        async: true
+      }
     ]
   },
   loading: false,
