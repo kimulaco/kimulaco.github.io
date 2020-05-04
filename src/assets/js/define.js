@@ -48,7 +48,7 @@ export const SKILL = [
   'TypeScript',
   'Vue.js',
   'Nuxt.js',
-  'Stencil.js',
+  'Stencil',
   'Node.js',
   'jQuery',
   'Jest',
@@ -56,24 +56,18 @@ export const SKILL = [
   'Webpack',
   'AMP',
   'PHP',
+  'GitHub Actions',
   'CircleCI',
   'Travis CI'
 ]
 
-export const LIKE = [
-  'Movie',
-  'MARVEL',
-  'Manga',
-  'Game',
-  'KOJIMA PRODUCTIONS',
-  'Dead by Daylight'
-]
+export const LIKE = ['Movie', 'Manga', 'Game']
 
 export const PRODUCT = [
   {
     name: 'kimulaco blog',
     desc: "kimulaco's tech blog (Japanese).",
-    url: 'https://blog.kimulaco.me/'
+    url: 'https://kimulaco.com/'
   },
   {
     name: 'Aqua Theme',
